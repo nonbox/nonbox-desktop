@@ -1,0 +1,38 @@
+{
+  "name": "nonbox",
+  "productName": "Nonbox",
+  "version": "0.0.0",
+  "description": "App for nonbox http://nonbox.co",
+  "license": "MIT",
+  "repository": "brilliantla8s/nonbox",
+  "author": {
+    "name": "Ricky Brown",
+    "email": "ricky@brilliantlabs.co",
+    "url": "brilliantlabs.co"
+  },
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . --out=dist --asar --overwrite --all"
+  },
+  "keywords": [
+    "electron-app",
+    "electron"
+  ],
+  "dependencies": {
+    "electron-debug": "^1.0.0"
+  },
+  "devDependencies": {
+    "devtron": "^1.1.0",
+    "electron-packager": "^8.0.0",
+    "electron": "^1.3.3",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}
