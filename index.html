@@ -3,17 +3,23 @@
 	<head>
 		<meta charset="utf-8">
 		<title>nonbox</title>
-		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="node_modules/photonkit/dist/css/photon.css">
+		<link rel="stylesheet" href="app/css/main.css">
 	</head>
 	<body ng-app="app" ng-cloak>
-		<div class="container">
-			<header>
-				<h1>nonbox</h1>
-			</header>
-			<section class="main">
-				<div ui-view></div>
-			</section>
-			<footer></footer>
+		<div class="window">
+		  <!-- <header class="toolbar toolbar-header">
+		    <h1 class="title">Header</h1>
+		  </header> -->
+		  <div class="window-content">
+		    <div class="pane-group">
+		      <div class="pane-sm sidebar">...</div>
+		      <div class="pane" ui-view></div>
+		    </div>
+		  </div>
+		  <footer class="toolbar toolbar-footer">
+		    <h1 class="title">nonbox http://nonbox.co</h1>
+		  </footer>
 		</div>
 		<!-- js dependencies -->
 		<script src="node_modules/angular/angular.min.js"></script>

@@ -22,7 +22,8 @@
   "dependencies": {
     "angular": "^1.6.3",
     "angular-ui-router": "^0.4.2",
-    "electron-debug": "^1.0.0"
+    "electron-debug": "^1.0.0",
+    "photonkit": "^0.1.2"
   },
   "devDependencies": {
     "devtron": "^1.1.0",

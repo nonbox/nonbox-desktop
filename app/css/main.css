@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Photon';
+  src: url('../../node_modules/photonkit/dist/fonts/photon-entypo.eot'),
+       url('../../node_modules/photonkit/dist/fonts/photon-entypo.woff') format('woff'),
+       url('../../node_modules/photonkit/dist/fonts/photon-entypo.ttf')  format('truetype'),
+       url('../../node_modules/photonkit/dist/fonts/photon-entypo.svg#photon-entypo') format('svg');
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Photon', -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
