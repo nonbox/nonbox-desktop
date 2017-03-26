@@ -1,17 +1,26 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Electron boilerplate</title>
+		<title>nonbox</title>
 		<link rel="stylesheet" href="index.css">
 	</head>
-	<body>
+	<body ng-app="app" ng-cloak>
 		<div class="container">
 			<header>
-				<h1>Electron boilerplate</h1>
+				<h1>nonbox</h1>
 			</header>
-			<section class="main"></section>
+			<section class="main">
+				<div ui-view></div>
+			</section>
 			<footer></footer>
 		</div>
+		<!-- js dependencies -->
+		<script src="node_modules/angular/angular.min.js"></script>
+		<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<!-- app js -->
+		<script src="app/js/app.js"></script>
+		<script src="app/js/controllers.js"></script>
+		<script src="app/js/routes.js"></script>
 	</body>
 </html>
