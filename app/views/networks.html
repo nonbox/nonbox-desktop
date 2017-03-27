@@ -1,0 +1,33 @@
+<ng-include src="'app/views/passwordDialog.html'"></ng-include>
+
+<div class="pane-group">
+  <div class="pane-sm sidebar">
+    <!-- {{status}} -->
+  </div>
+  <div class="pane">
+    <h1>Wifi networks in range</h1>
+    <hr/>
+    <ul class="list-group">
+      <li class="list-group-item"
+          ng-repeat="network in networks | orderBy: network.signal_strength"
+          ng-class="{'open-network':!network.security}">
+        <div class="actions">
+          <button ng-click="connect(network)" class="btn btn-default">Connect</button>
+        </div>
+        <span class="icon icon-signal media-object pull-left"
+          ng-style="{'color':colorStrength(network.signal_level)}">
+        </span>
+        <div class="media-body">
+          <strong class="top" ng-bind="network.ssid"></strong>
+          <p class="bottom" ng-show="network.security">
+            <span class="icon icon-lock"></span>
+            <span ng-bind="network.security"></div>
+          </p>
+          <p class="bottom" ng-show="!network.security">
+            <span class="icon icon-lock-open"></span> Open
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

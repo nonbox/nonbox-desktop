@@ -8,17 +8,17 @@
 	</head>
 	<body ng-app="app" ng-cloak>
 		<div class="window">
-		  <!-- <header class="toolbar toolbar-header">
-		    <h1 class="title">Header</h1>
-		  </header> -->
+			<ng-include src="'app/views/navbar.html'"></ng-include>
 		  <div class="window-content">
 		    <div class="pane-group">
-		      <div class="pane-sm sidebar">...</div>
+		      <div class="pane-sm sidebar">
+						<ng-include src="'app/views/sidebar.html'"></ng-include>
+					</div>
 		      <div class="pane" ui-view></div>
 		    </div>
 		  </div>
 		  <footer class="toolbar toolbar-footer">
-		    <h1 class="title">nonbox http://nonbox.co</h1>
+		    <h1 class="title">nonbox <a class="open-in-browser" href="http://nonbox.co">http://nonbox.co</a></h1>
 		  </footer>
 		</div>
 		<!-- js dependencies -->
@@ -26,6 +26,7 @@
 		<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 		<!-- app js -->
 		<script src="app/js/app.js"></script>
+		<script src="app/js/services.js"></script>
 		<script src="app/js/controllers.js"></script>
 		<script src="app/js/routes.js"></script>
 	</body>

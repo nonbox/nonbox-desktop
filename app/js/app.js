@@ -4,4 +4,7 @@ const app = angular.module('app');
 
 app.run(function($rootScope){
   console.log('nonbox app running')
+
+  $rootScope.currentDevice = '';
+  $rootScope.nbServer = 'http://localhost:3000/'
 });
