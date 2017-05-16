@@ -1,14 +1,9 @@
 app.config(function($locationProvider, $stateProvider, $urlRouterProvider){
   $stateProvider
-  .state('main', {
+  .state('device', {
     url:'/',
-    templateUrl: 'app/views/main.html',
-    controller: 'MainCtrl'
-  })
-  .state('devices', {
-    url:'/devices',
-    templateUrl: 'app/views/devices.html',
-    controller: 'DevicesCtrl'
+    templateUrl: 'app/views/device.html',
+    controller: 'DeviceCtrl'
   })
   .state('networks', {
     url:'/networks',
@@ -17,27 +12,37 @@ app.config(function($locationProvider, $stateProvider, $urlRouterProvider){
   })
   .state('quickstart', {
     url:'/quickstart',
-    template: 'app/views/devices.html'
+    templateUrl: 'app/views/quickstart.html'
   })
   .state('tutorials', {
     url:'/tutorials',
-    template: 'app/views/devices.html'
+    templateUrl: 'app/views/tutorials.html',
+    controller: function($scope, Tutorials){
+      $scope.showMode = false;
+      $scope.tutorials = Tutorials;
+      $scope.show = function(tutorial){
+        $scope.showMode = true;
+        $scope.tutorial = tutorial;
+      }
+    }
   })
   .state('support', {
     url:'/support',
-    template: 'app/views/devices.html'
+    templateUrl: 'app/views/support.html'
   })
   .state('bugs', {
     url:'/bugs',
-    template: 'app/views/devices.html'
+    templateUrl: 'app/views/bugreport.html',
+    controller: 'ReportsCtrl'
   })
   .state('suggestions', {
     url:'/suggestions',
-    template: 'app/views/devices.html'
+    templateUrl: 'app/views/suggestion.html',
+    controller: 'ReportsCtrl'
   })
   .state('pr', {
     url:'/pr',
-    template: 'app/views/devices.html'
+    templateUrl: 'app/views/pr.html'
   });
   // catchall route
   $urlRouterProvider.otherwise('/');

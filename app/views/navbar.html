@@ -1,9 +1,21 @@
 <header class="toolbar toolbar-header">
-  <h1 class="title">nonbox</h1>
+  <h1 class="title">
+    nonbox connect
+  </h1>
+  <span class="window-buttons">
+    <a title="minimize"
+       ng-click="currentWindow('minimize')"
+       class="btn icon icon-minus-circled yellow">
+    </a>
+    <a title="close"
+       ng-click="currentWindow('close')"
+       class=" btn icon icon-cancel-circled red">
+    </a>
+  </span>
 
   <div class="toolbar-actions">
     <div class="btn-group">
-      <button class="btn btn-default" ui-sref="devices" ui-sref-active="active">
+      <button class="btn btn-default" ui-sref="device" ui-sref-active="active">
         <span class="icon icon-drive"></span>
       </button>
       <button class="btn btn-default" ui-sref="networks" ui-sref-active="active">
@@ -35,7 +47,7 @@
 
     <button class="btn btn-default btn-dropdown pull-right">
       <span class="icon icon-drive"></span>&nbsp;&nbsp;
-      Current Device
+      Nonbox Cloud
     </button>
   </div>
 </header>

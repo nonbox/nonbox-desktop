@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>nonbox</title>
+		<title>nonbox connect</title>
 		<link rel="stylesheet" href="node_modules/photonkit/dist/css/photon.css">
 		<link rel="stylesheet" href="app/css/main.css">
 	</head>
@@ -18,15 +18,21 @@
 		    </div>
 		  </div>
 		  <footer class="toolbar toolbar-footer">
-		    <h1 class="title">nonbox <a class="open-in-browser" href="http://nonbox.co">http://nonbox.co</a></h1>
+		    <h1 class="title">&copy; nonbox, Inc&nbsp;&nbsp;&nbsp;
+					<a class="exref" ng-click="exref('https://nonbox.co')">https://nonbox.co</a>
+				</h1>
 		  </footer>
 		</div>
 		<!-- js dependencies -->
 		<script src="node_modules/angular/angular.min.js"></script>
 		<script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="node_modules/angular-electron/angular-electron.min.js"></script>
 		<!-- app js -->
 		<script src="app/js/app.js"></script>
 		<script src="app/js/services.js"></script>
+		<script src="app/js/networks.js"></script>
+		<script src="app/js/device.js"></script>
+		<script src="app/js/tutorials.js"></script>
 		<script src="app/js/controllers.js"></script>
 		<script src="app/js/routes.js"></script>
 	</body>

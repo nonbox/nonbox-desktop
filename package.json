@@ -1,14 +1,14 @@
 {
   "name": "nonbox",
-  "productName": "Nonbox",
+  "productName": "nonbox",
   "version": "0.0.0",
-  "description": "App for nonbox http://nonbox.co",
+  "description": "Companion app for nonbox https://nonbox.co",
   "license": "MIT",
-  "repository": "brilliantla8s/nonbox",
+  "repository": "nonbox/nonbox-client",
   "author": {
     "name": "Ricky Brown",
     "email": "ricky@brilliantlabs.co",
-    "url": "brilliantlabs.co"
+    "url": "https://nonbox.co"
   },
   "scripts": {
     "test": "xo",
@@ -21,6 +21,7 @@
   ],
   "dependencies": {
     "angular": "^1.6.3",
+    "angular-electron": "^0.2.1",
     "angular-ui-router": "^0.4.2",
     "body-parser": "^1.17.1",
     "electron-debug": "^1.0.0",
