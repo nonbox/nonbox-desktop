@@ -21,6 +21,10 @@ header {
 footer {
   -webkit-app-region: no-drag!important;
 }
+nav {
+  position:relative;
+  height:100%;
+}
 h1 {
   text-align:center;
 }
@@ -34,6 +38,21 @@ h1.title {
 }
 .btn.active, .btn.active .icon {
   background:#333;
+}
+.logo-icon {
+  position:absolute;
+  top:8px; left:8px;
+  width:27px;
+}
+.logo-icon img, .logo-logo img {
+  width:100%;
+}
+.logo-logo {
+  position:absolute;;
+  bottom:0;
+  left:0; right:0;
+  margin:auto;
+  width:60%;
 }
 .window-buttons {
   position:absolute;

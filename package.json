@@ -1,7 +1,7 @@
 {
   "name": "nonbox",
   "productName": "nonbox",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Companion app for nonbox https://nonbox.co",
   "license": "MIT",
   "repository": "nonbox/nonbox-client",

@@ -31,7 +31,12 @@ function createMainWindow() {
 	const win = new electron.BrowserWindow({
 		frame: false,
 		width: 750,
-		height: 650
+		height: 650,
+    minWidth: 750,
+		minHeight: 650,
+    maxWidth: 750,
+		maxHeight: 650,
+    icon: `${__dirname}/icons/png/64x64.png`
 	});
 
 	win.loadURL(`file://${__dirname}/index.html`);
