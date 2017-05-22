@@ -1,39 +1,70 @@
 {
-  "name": "nonbox",
-  "productName": "nonbox",
+  "name": "nonbox-desktop",
   "version": "1.0.0",
-  "description": "Companion app for nonbox https://nonbox.co",
+  "description": "Desktop companion app for nonbox https://nonbox.co",
+  "main": "index.js",
   "license": "MIT",
-  "repository": "nonbox/nonbox-client",
-  "author": {
-    "name": "Ricky Brown",
-    "email": "ricky@brilliantlabs.co",
-    "url": "https://nonbox.co"
+  "dependencies": {
+    "angular-electron": "^0.2.1",
+    "body-parser": "^1.17.1",
+    "electron-debug": "^1.0.0",
+    "express": "^4.15.2",
+    "nonbox-client": "^1.0.0",
+    "photonkit": "^0.1.2"
+  },
+  "devDependencies": {
+    "devtron": "^1.1.0",
+    "electron": "^1.3.3",
+    "electron-builder": "^17.8.0",
+    "electron-packager": "^8.0.0",
+    "xo": "^0.16.0"
   },
   "scripts": {
     "test": "xo",
     "start": "electron .",
     "build": "electron-packager . --out=dist --asar --overwrite --all"
   },
-  "keywords": [
-    "electron-app",
-    "electron"
-  ],
-  "dependencies": {
-    "angular": "^1.6.3",
-    "angular-electron": "^0.2.1",
-    "angular-ui-router": "^0.4.2",
-    "body-parser": "^1.17.1",
-    "electron-debug": "^1.0.0",
-    "express": "^4.15.2",
-    "photonkit": "^0.1.2",
-    "wifi-control": "^2.0.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nonbox/nonbox-desktop"
   },
-  "devDependencies": {
-    "devtron": "^1.1.0",
-    "electron-packager": "^8.0.0",
-    "electron": "^1.3.3",
-    "xo": "^0.16.0"
+  "keywords": [
+    "nonbox-client",
+    "nonbox",
+    "client"
+  ],
+  "author": "Ricky Brown",
+  "bugs": {
+    "url": "https://github.com/nonbox/nonbox-desktop/issues"
+  },
+  "homepage": "https://nonbox.co",
+  "build": {
+    "appId": "co.nonbox.connect",
+    "category": "network",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
   },
   "xo": {
     "esnext": true,
